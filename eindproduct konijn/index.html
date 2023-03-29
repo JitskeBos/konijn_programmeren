@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress up your konijn</title>
+    <link rel="icon" href="./images/konijn.png">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <div id="container" class="container">
+        <div id="tabel" class="tabel">
+            <h1>Dress up your konijn</h1>
+            <div class="choices">
+                <h2>hoofddeksels</h2>
+                <div class="table-list hoofd-table">
+                    <img id="bril" src="./images/kleding/bril.png" alt="bril">
+                    <img id="hoedje" src="./images/kleding/hoedje.png" alt="hoedje">
+                    <img id="strikje-hoofd" src="./images/kleding/strikje hoofd.png" alt="strikje op hoofd">
+                    <img id="snor" src="./images/kleding/snor.png" alt="snor">
+                </div>
+
+                <h2>kleding</h2>
+                <div class="table-list lijf-table">
+                    <img id="schild" src="./images/kleding/schild.png" alt="schild">
+                    <img id="stropdas" src="./images/kleding/stropdas.png" alt="stropdas">
+                    <img id="stikje-lijf" src="./images/kleding/strikje lijf.png" alt="strikje op lijf">
+                    <img id="elfje" src="./images/kleding/elfje.png" alt="elfje">
+                </div>
+
+                <h2>schoenen</h2>
+                <div class="table-list schoenen-table">
+                    <img id="sokken" src="./images/kleding/sokken.png" alt="sokken">
+                    <img id="sloffen" src="./images/kleding/sloffen.png" alt="sloffen">
+                    <img id="klompen" src="./images/kleding/klompen.png" alt="klompen">
+                    <img id="crocs" src="./images/kleding/crocs.png" alt="crocs">
+                </div>
+            </div>
+        </div>
+
+        <div class="rechts">
+            <div id="konijn-container" class="konijn-container">
+                <img id="konijn" class="konijn" src="./images/konijn.png" alt="?">
+                <div class="konijn-container__item">
+                    <img id="hoofdKonijn" class="konijn-item" src="" alt="hoofdKonijn">
+                </div>
+                <div class="konijn-container__item">
+                    <img id="lijfKonijn" class="konijn-item lijf-item" src="" alt="lijfKonijn">
+                </div>
+                <div class="konijn-container__item">
+                    <img id="schoenKonijn" class="konijn-item schoen-item" src="" alt="schoenKonijn">
+                </div>
+            </div>
+
+            <div class="knoppen">
+                <button id="reset"> Reset</button>
+                <button id="play"> Play</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="spelen" class="spelen">
+        <h1 id="titelPlay">Play with your konijn</h1>
+        <p id="hulpTekst">Drag the carrot to your konijn</p>
+        <p id="hulpTekst2">Super cool!</p>
+        <div id="konijn-spelen" class="konijn-spelen">
+            <div class="ultimate-konijn-doos">
+                <div class="wortel" draggable="true" ondragstart="drag(ev)">
+                    <img id="wortel" src="./images/wortel.png" alt="wortel">
+                </div>
+
+                <div class="konijn-doos">
+                    <h2 id="spraak" style="display: none;">mmmm lekker!!</h2>
+
+                    <img id="konijn2" class="konijn2 konijn" src="./images/konijn.png" alt="?" draggable="false"
+                        ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div id="konijnKleding2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="konijn-container__item">
+                            <img id="hoofdKonijn2" class="konijn-item2" src="" alt="hoofdKonijn">
+                        </div>
+                        <div class="konijn-container__item">
+                            <img id="lijfKonijn2" class="konijn-item2 lijf-item2" src="" alt="lijfKonijn">
+                        </div>
+                        <div class="konijn-container__item">
+                            <img id="schoenKonijn2" class="konijn-item2 schoen-item2" src="" alt="schoenKonijn">
+                        </div>
+                        <img id="skateImg" src="./images/skateboard.png" alt="skateboard">
+                    </div>
+                </div>
+
+
+                <!-- Bron: Joep de Franse hangoor -->
+                <audio id="audio1" src="./audio/etendeJoep.m4a">
+                </audio>
+                <!-- Bron: https://www.myinstants.com/en/instant/they-see-me-rollin/ EN "ridin" by Chamillionair -->
+                <audio id="audio2" src="./audio/TheySeeMeRollin.mov"></audio>
+            </div>
+            <div class="naamKonijn" id="naamKonijn">
+                <div class="woorden">
+                    <h2>Mijn naam wordt:</h2>
+                    <p id="naam"></p>
+                    <p id="extratje"></p>
+                </div>
+                <div class="knopjes">
+                    <button id="klikHier"> Klik hier voor een naam </button>
+                    <button id="terug2">Terug</button>
+                </div>
+            </div>
+
+            <div class="knoppen2">
+                <button id="voedsel"> Wortel</button>
+                <button id="skateboard"> Skateboard</button>
+                <button id="namen"> Geef me een naam</button>
+                <button id="terug"> Terug</button>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+</body>
+
+</html>
